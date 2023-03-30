@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox prefHeight="260.0" prefWidth="600.0">
+        <Label prefHeight="34.0" prefWidth="578.0" text="文件元数据修改" textAlignment="CENTER">
+            <font>
+                <Font name="Noto Sans Mono CJK SC" size="18.0" />
+            </font>
+            <padding>
+                <Insets bottom="4.0" left="8.0" right="4.0" top="4.0" />
+            </padding>
+            <VBox.margin>
+                <Insets left="8.0" />
+            </VBox.margin>
+        </Label>
+        <Separator prefWidth="200.0" />
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+            <Label prefHeight="40.0" prefWidth="70.0" text="文档编号">
+                <font>
+                    <Font name="Noto Sans Mono CJK SC" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="8.0" />
+                </padding>
+            </Label>
+            <TextField prefHeight="25.0" prefWidth="500.0" fx:id="primaryFileIndex">
+                <HBox.margin>
+                    <Insets left="16.0" />
+                </HBox.margin>
+            </TextField>
+        </HBox>
+      <Separator prefWidth="200.0" />
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+            <Label prefHeight="40.0" prefWidth="70.0" text="保密程度">
+                <font>
+                    <Font name="Noto Sans Mono CJK SC" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="8.0" />
+                </padding>
+            </Label>
+            <TextField prefHeight="25.0" prefWidth="500.0" fx:id="primaryFileSecurity">
+                <HBox.margin>
+                    <Insets left="16.0" />
+                </HBox.margin>
+            </TextField>
+        </HBox>
+      <Separator prefWidth="200.0" />
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+            <Label prefHeight="40.0" prefWidth="70.0" text="紧急程度">
+                <font>
+                    <Font name="Noto Sans Mono CJK SC" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="8.0" />
+                </padding>
+            </Label>
+            <TextField prefHeight="25.0" prefWidth="500.0" fx:id="primaryFileNecessary">
+                <HBox.margin>
+                    <Insets left="16.0" />
+                </HBox.margin>
+            </TextField>
+        </HBox>
+    </VBox>
+</Pane>

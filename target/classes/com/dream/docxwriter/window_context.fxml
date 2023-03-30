@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox prefHeight="327.0" prefWidth="600.0">
+        <Label prefHeight="34.0" prefWidth="578.0" text="新子内容编辑窗口" textAlignment="CENTER">
+            <font>
+                <Font name="Noto Sans Mono CJK SC" size="18.0" />
+            </font>
+            <padding>
+                <Insets bottom="4.0" left="8.0" right="4.0" top="4.0" />
+            </padding>
+            <VBox.margin>
+                <Insets left="8.0" />
+            </VBox.margin>
+        </Label>
+        <Separator prefWidth="200.0" />
+        <Label prefHeight="40.0" prefWidth="584.0" text="这里的子内容指的是以仿宋16sp大小字体展示的在子标题下的文字" wrapText="true">
+            <font>
+                <Font name="Noto Sans Mono CJK SC" size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="16.0" />
+            </VBox.margin>
+        </Label>
+        <TextArea fx:id="window_context_container" prefHeight="239.0" prefWidth="568.0" wrapText="true">
+            <VBox.margin>
+                <Insets left="16.0" right="16.0" top="4.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Noto Sans Mono CJK SC" size="14.0" />
+            </font>
+        </TextArea>
+    </VBox>
+</Pane>

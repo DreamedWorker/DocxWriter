@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="47.0" prefWidth="600.0" text="修改指定内容">
+               <font>
+                  <Font name="Noto Sans Mono CJK SC" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label text="你将对已经存入的字段进行再修改，不保存不会影响原内容。">
+               <font>
+                  <Font name="Noto Sans Mono CJK SC" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </Label>
+            <TextArea prefHeight="318.0" prefWidth="600.0" wrapText="true" fx:id="window_change_container">
+               <VBox.margin>
+                  <Insets left="8.0" right="8.0" top="4.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Noto Sans Mono CJK SC" size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </VBox>
+   </children>
+</Pane>

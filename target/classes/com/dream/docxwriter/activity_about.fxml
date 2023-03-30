@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Hyperlink?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.dream.docxwriter.controller.AboutController"
+      prefHeight="400.0" prefWidth="600.0">
+    <Label alignment="CENTER" prefHeight="15.0" prefWidth="607.0" text="关于 DocxWriter" wrapText="true">
+        <font>
+            <Font name="System Bold" size="20.0" />
+        </font>
+        <VBox.margin>
+            <Insets bottom="4.0" top="8.0" />
+        </VBox.margin>
+    </Label>
+    <Label alignment="CENTER" prefHeight="15.0" prefWidth="600.0" text="Version 0.0.1">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER" prefHeight="15.0" prefWidth="604.0" text="一个能够让你专注于文字创造而减少格式困扰的公文生成软件">
+        <font>
+            <Font size="14.0" />
+        </font>
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </Label>
+    <Separator prefWidth="200.0">
+        <VBox.margin>
+            <Insets bottom="4.0" top="4.0" />
+        </VBox.margin>
+    </Separator>
+    <Label text="特别提示：本软件在AGPL-3.0协议下开源，不含任何担保！你对本软件及其副本的使用、复制、修改和分发等行为系自愿行为，请遵守协议约定。" wrapText="true">
+        <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+        </padding>
+    </Label>
+    <Separator prefWidth="200.0" />
+    <Hyperlink text="开发者：BlueDream（单击查看详细信息）" underline="true"
+               fx:id="developProfile" onAction="#goDeveloper"/>
+    <Hyperlink text="查看本项目仓库" underline="true" fx:id="githubInfo" onAction="#goLib">
+        <VBox.margin>
+            <Insets top="8.0" />
+        </VBox.margin>
+    </Hyperlink>
+</VBox>

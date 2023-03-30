@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dream.docxwriter.HelloController">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="文件">
+            <MenuItem mnemonicParsing="false" onAction="#onMainNewSelected" text="新建文稿" />
+            <MenuItem mnemonicParsing="false" text="保存" onAction="#saveFile" />
+            <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="关闭程序" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="编辑">
+            <MenuItem mnemonicParsing="false" text="增改元数据" onAction="#onPrimarySelected"/>
+            <MenuItem mnemonicParsing="false" text="清空全部" onAction="#onClearAllSelected"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="帮助">
+            <MenuItem mnemonicParsing="false" text="关于" onAction="#onAboutSelected"/>
+            <MenuItem mnemonicParsing="false" text="帮助文档" onAction="#onHelpDocSelected"/>
+        </Menu>
+    </MenuBar>
+    <ScrollPane prefHeight="553.0" prefWidth="800.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="551.0" prefWidth="798.0">
+            <VBox layoutX="7.0" layoutY="6.0" prefHeight="541.0" prefWidth="787.0">
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="文件红头">
+                        <font>
+                            <Font name="等线" size="16.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="mainRedHead" prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布者（可以留空）">
+                        <HBox.margin>
+                            <Insets left="16.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线" />
+                        </font>
+                    </TextField>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="文件标题">
+                        <font>
+                            <Font size="16.0" name="等线" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="mainTitle" prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的实在标题">
+                        <HBox.margin>
+                            <Insets left="16.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线" />
+                        </font>
+                    </TextField>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <GridPane prefHeight="250.0" prefWidth="787.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets top="8.0" />
+                    </padding>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <GridPane.margin>
+                            <Insets right="4.0" />
+                        </GridPane.margin>
+                        <Label text="正文所有内容编辑">
+                            <font>
+                                <Font name="等线" size="16.0"/>
+                            </font>
+                        </Label>
+                        <ListView fx:id="paraList" prefHeight="200.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets bottom="4.0" top="4.0" />
+                            </VBox.margin></ListView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="390.0">
+                            <Button onMouseClicked="#addPara" text="添加一条自然段">
+                                <font>
+                                    <Font name="等线" />
+                                </font>
+                            </Button>
+                            <Button text="添加一条小标题" onMouseClicked="#addSubtitle">
+                                <HBox.margin>
+                                    <Insets left="8.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font name="等线" />
+                                </font>
+                            </Button>
+                            <Button text="添加一条子内容" onMouseClicked="#addSubContext">
+                                <HBox.margin>
+                                    <Insets left="8.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font name="等线" />
+                                </font>
+                            </Button>
+                            <Button mnemonicParsing="false" onMouseClicked="#deleteSelected" text="删除所选">
+                                <HBox.margin>
+                                    <Insets left="8.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font name="等线" />
+                                </font>
+                            </Button>
+                            <Button mnemonicParsing="false" onMouseClicked="#modifySelectedP" text="变更所选">
+                                <HBox.margin>
+                                    <Insets left="8.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font name="等线" />
+                                </font>
+                            </Button>
+                        </HBox>
+                    </VBox>
+                </GridPane>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="8.0" top="8.0" />
+                    </VBox.margin>
+                </Separator>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="文件抬头">
+                        <font>
+                            <Font size="16.0" name="等线"/>
+                        </font>
+                    </Label>
+                    <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件实在标题下方的顶格内容" fx:id="mainHeader">
+                        <HBox.margin>
+                            <Insets left="16.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线" />
+                        </font>
+                    </TextField>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="落款">
+                        <font>
+                            <Font size="16.0" name="等线"/>
+                        </font>
+                    </Label>
+                    <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布者" fx:id="mainSender">
+                        <HBox.margin>
+                            <Insets left="48.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线"/>
+                        </font>
+                    </TextField>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="完成时间">
+                        <font>
+                            <Font size="16.0" name="等线"/>
+                        </font>
+                    </Label>
+                    <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布时间或写作完成时间" fx:id="mainTime">
+                        <HBox.margin>
+                            <Insets left="16.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线"/>
+                        </font>
+                    </TextField>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
+                    <Label text="发文号">
+                        <font>
+                            <Font size="16.0" name="等线"/>
+                        </font>
+                    </Label>
+                    <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的签发部门、年份、号" fx:id="mainIndex">
+                        <HBox.margin>
+                            <Insets left="32.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font name="等线"/>
+                        </font>
+                    </TextField>
+                </HBox>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="4.0" top="8.0" />
+                    </VBox.margin>
+                </Separator>
+                <Label text="文件的「编号」、「保密程度」和「紧急程度」在元数据中编辑">
+                    <font>
+                        <Font size="14.0" name="等线"/>
+                    </font>
+                </Label>
+            </VBox>
+        </AnchorPane>
+    </ScrollPane>
+</VBox>
