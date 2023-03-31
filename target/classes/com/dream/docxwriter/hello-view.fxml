@@ -17,7 +17,7 @@
             <MenuItem mnemonicParsing="false" text="清空全部" onAction="#onClearAllSelected"/>
         </Menu>
         <Menu mnemonicParsing="false" text="帮助">
-            <MenuItem mnemonicParsing="false" text="关于" onAction="#onAboutSelected"/>
+            <MenuItem mnemonicParsing="false" text="关于" onAction="#aboutWindow"/>
             <MenuItem mnemonicParsing="false" text="帮助文档" onAction="#onHelpDocSelected"/>
         </Menu>
     </MenuBar>
@@ -27,7 +27,7 @@
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="文件红头">
                         <font>
-                            <Font name="等线" size="16.0" />
+                            <Font name="Noto Sans Mono CJK SC" size="16.0" />
                         </font>
                     </Label>
                     <TextField fx:id="mainRedHead" prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布者（可以留空）">
@@ -35,14 +35,14 @@
                             <Insets left="16.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线" />
+                            <Font name="Noto Sans Mono CJK SC" />
                         </font>
                     </TextField>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="文件标题">
                         <font>
-                            <Font size="16.0" name="等线" />
+                            <Font size="16.0" name="Noto Sans Mono CJK SC" />
                         </font>
                     </Label>
                     <TextField fx:id="mainTitle" prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的实在标题">
@@ -50,7 +50,7 @@
                             <Insets left="16.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线" />
+                            <Font name="Noto Sans Mono CJK SC" />
                         </font>
                     </TextField>
                 </HBox>
@@ -71,7 +71,7 @@
                         </GridPane.margin>
                         <Label text="正文所有内容编辑">
                             <font>
-                                <Font name="等线" size="16.0"/>
+                                <Font name="Noto Sans Mono CJK SC" size="16.0"/>
                             </font>
                         </Label>
                         <ListView fx:id="paraList" prefHeight="200.0" prefWidth="200.0">
@@ -81,7 +81,7 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="390.0">
                             <Button onMouseClicked="#addPara" text="添加一条自然段">
                                 <font>
-                                    <Font name="等线" />
+                                    <Font name="Noto Sans Mono CJK SC" />
                                 </font>
                             </Button>
                             <Button text="添加一条小标题" onMouseClicked="#addSubtitle">
@@ -89,7 +89,7 @@
                                     <Insets left="8.0" />
                                 </HBox.margin>
                                 <font>
-                                    <Font name="等线" />
+                                    <Font name="Noto Sans Mono CJK SC" />
                                 </font>
                             </Button>
                             <Button text="添加一条子内容" onMouseClicked="#addSubContext">
@@ -97,7 +97,7 @@
                                     <Insets left="8.0" />
                                 </HBox.margin>
                                 <font>
-                                    <Font name="等线" />
+                                    <Font name="Noto Sans Mono CJK SC" />
                                 </font>
                             </Button>
                             <Button mnemonicParsing="false" onMouseClicked="#deleteSelected" text="删除所选">
@@ -105,7 +105,7 @@
                                     <Insets left="8.0" />
                                 </HBox.margin>
                                 <font>
-                                    <Font name="等线" />
+                                    <Font name="Noto Sans Mono CJK SC" />
                                 </font>
                             </Button>
                             <Button mnemonicParsing="false" onMouseClicked="#modifySelectedP" text="变更所选">
@@ -113,7 +113,7 @@
                                     <Insets left="8.0" />
                                 </HBox.margin>
                                 <font>
-                                    <Font name="等线" />
+                                    <Font name="Noto Sans Mono CJK SC" />
                                 </font>
                             </Button>
                         </HBox>
@@ -127,7 +127,7 @@
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="文件抬头">
                         <font>
-                            <Font size="16.0" name="等线"/>
+                            <Font size="16.0" name="Noto Sans Mono CJK SC"/>
                         </font>
                     </Label>
                     <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件实在标题下方的顶格内容" fx:id="mainHeader">
@@ -135,14 +135,14 @@
                             <Insets left="16.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线" />
+                            <Font name="Noto Sans Mono CJK SC" />
                         </font>
                     </TextField>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="落款">
                         <font>
-                            <Font size="16.0" name="等线"/>
+                            <Font size="16.0" name="Noto Sans Mono CJK SC"/>
                         </font>
                     </Label>
                     <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布者" fx:id="mainSender">
@@ -150,14 +150,14 @@
                             <Insets left="48.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线"/>
+                            <Font name="Noto Sans Mono CJK SC"/>
                         </font>
                     </TextField>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="完成时间">
                         <font>
-                            <Font size="16.0" name="等线"/>
+                            <Font size="16.0" name="Noto Sans Mono CJK SC"/>
                         </font>
                     </Label>
                     <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的发布时间或写作完成时间" fx:id="mainTime">
@@ -165,14 +165,14 @@
                             <Insets left="16.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线"/>
+                            <Font name="Noto Sans Mono CJK SC"/>
                         </font>
                     </TextField>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="787.0">
                     <Label text="发文号">
                         <font>
-                            <Font size="16.0" name="等线"/>
+                            <Font size="16.0" name="Noto Sans Mono CJK SC"/>
                         </font>
                     </Label>
                     <TextField prefHeight="32.0" prefWidth="697.0" promptText="一般指文件的签发部门、年份、号" fx:id="mainIndex">
@@ -180,7 +180,7 @@
                             <Insets left="32.0" />
                         </HBox.margin>
                         <font>
-                            <Font name="等线"/>
+                            <Font name="Noto Sans Mono CJK SC"/>
                         </font>
                     </TextField>
                 </HBox>
@@ -191,7 +191,7 @@
                 </Separator>
                 <Label text="文件的「编号」、「保密程度」和「紧急程度」在元数据中编辑">
                     <font>
-                        <Font size="14.0" name="等线"/>
+                        <Font size="14.0" name="Noto Sans Mono CJK SC"/>
                     </font>
                 </Label>
             </VBox>

@@ -3,7 +3,6 @@ package com.dream.docxwriter;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.poi.PoiChecker;
 import cn.hutool.poi.word.Word07Writer;
-import com.dream.docxwriter.controller.AboutController;
 import com.dream.docxwriter.helper.DocxHelper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -48,16 +47,6 @@ public class HelloController extends Control {
     @FXML
     private void onMainNewSelected() throws IOException { //create a new window with the same view
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800.0, 600.0);
-        Stage stage = new Stage();
-        stage.setTitle("WordWriter - Official File Generator");
-        stage.setScene(scene);
-        stage.show(); //copy the code from Application.kt
-    }
-
-    @FXML
-    private void onAboutSelected() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("activity_about.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800.0, 600.0);
         Stage stage = new Stage();
         stage.setTitle("WordWriter - Official File Generator");
@@ -254,6 +243,12 @@ public class HelloController extends Control {
     }
 
     @FXML
-    private void aboutWindow(){
+    private void aboutWindow() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("activity_about.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800.0, 600.0);
+        Stage stage = new Stage();
+        stage.setTitle("WordWriter - Official File Generator");
+        stage.setScene(scene);
+        stage.show(); //copy the code from Application.kt
     }
 }

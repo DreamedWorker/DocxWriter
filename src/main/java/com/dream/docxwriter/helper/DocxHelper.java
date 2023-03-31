@@ -1,8 +1,10 @@
 package com.dream.docxwriter.helper;
 
-import cn.hutool.setting.Setting;
 import javafx.collections.ObservableList;
-import org.apache.poi.xwpf.usermodel.*;
+import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 
 import java.math.BigInteger;
@@ -37,41 +39,38 @@ public class DocxHelper {
                 XWPFRun run = primary.createRun();
                 run.setText(data[0]);
                 run.setFontSize(16.0);
-                run.setFontFamily("STHeiti");
+                run.setFontFamily("SimHei");
             }
             if (!data[1].equals("n")) {
                 XWPFRun run = document.createParagraph().createRun();
                 run.setText(data[1]);
                 run.setFontSize(16.0);
-                run.setFontFamily("STHeiti");
+                run.setFontFamily("SimHei");
             }
             if (!data[2].equals("n")) {
                 XWPFRun run = document.createParagraph().createRun();
                 run.setText(data[2]);
                 run.setFontSize(16.0);
-                run.setFontFamily("STHeiti");
+                run.setFontFamily("SimHei");
             }
         }
     }
 
     public static void dealRedHead(XWPFDocument document, String redHead, String index){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         paragraph.setAlignment(ParagraphAlignment.CENTER);
         XWPFRun run = paragraph.createRun();
         run.setText(redHead);
         run.setFontSize(22.0);
         run.setColor("ed2a1e");
-        //run.setFontFamily("FZXBSJW--GB1-0");
-        run.setFontFamily(setting.getByGroup("font.XiaoBiaoSong", "windows"));
+        run.setFontFamily("FZXBSJW--GB1-0");
         XWPFRun run1 = paragraph.createRun();
         run1.addCarriageReturn();
         run1.addCarriageReturn();
         run1.addCarriageReturn();
         run1.setText(index);
         run1.setFontSize(16.0);
-        //run1.setFontFamily("STFangsong");
-        run1.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
+        run1.setFontFamily("FangSong");
         CTP ctp = paragraph.getCTP();
         CTPPr ctpPr = ctp.getPPr();
         if (ctpPr == null){
@@ -84,7 +83,6 @@ public class DocxHelper {
     }
 
     public static void dealIndex(XWPFDocument document, String index){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         paragraph.setAlignment(ParagraphAlignment.CENTER);
         XWPFRun run = paragraph.createRun();
@@ -92,12 +90,10 @@ public class DocxHelper {
         run.addCarriageReturn();
         run.setText(index);
         run.setFontSize(16.0);
-        //run.setFontFamily("STFangsong");
-        run.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
+        run.setFontFamily("FangSong");
     }
 
     public static void dealActualTitle(XWPFDocument document, String title){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         paragraph.setAlignment(ParagraphAlignment.CENTER);
         XWPFRun run = paragraph.createRun();
@@ -105,41 +101,33 @@ public class DocxHelper {
         run.addCarriageReturn();
         run.setText(title);
         run.setFontSize(16.0);
-        //run.setFontFamily("FZXBSJW--GB1-0");
-        run.setFontFamily(setting.getByGroup("font.XiaoBiaoSong", "windows"));
+        run.setFontFamily("FZXBSJW--GB1-0");
     }
 
     public static void dealFileHeader(XWPFDocument document, String header){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         XWPFRun run = paragraph.createRun();
         run.setText(header + "：");
         run.setFontSize(16.0);
-        //run.setFontFamily("STFangsong")
-        run.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
+        run.setFontFamily("FangSong");
         setStableLineStyle(paragraph);
     }
 
     public static void dealContext(XWPFDocument document, ObservableList<String> sentences){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         paragraph.setIndentationFirstLine(652);
         XWPFRun run = paragraph.createRun();
         run.setFontSize(16.0);
-        run.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
-        //run.setFontFamily("STFangsong");
-        //run.setText("        " + sentences.get(0).split(":")[1]);
+        run.setFontFamily("FangSong");
         run.setText(sentences.get(0).split(":")[1]);
         setStableLineStyle(paragraph);
         for (int i = 1; i < sentences.size(); i ++){
             XWPFParagraph xwpfParagraph = document.createParagraph();
             xwpfParagraph.setIndentationFirstLine(652);
             XWPFRun xwpfRun = xwpfParagraph.createRun();
-            //xwpfRun.setText("        " + sentences.get(i).split(":")[1]);
             xwpfRun.setText(sentences.get(i).split(":")[1]);
             xwpfRun.setFontSize(16.0);
-            xwpfRun.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
-            //xwpfRun.setFontFamily("STFangsong");
+            xwpfRun.setFontFamily("FangSong");
             setStableLineStyle(xwpfParagraph);
         }
     }
@@ -155,7 +143,6 @@ public class DocxHelper {
     }
 
     public static void dealBottom(XWPFDocument document, String sender, String time){
-        Setting setting = new Setting("normal.config");
         XWPFParagraph paragraph = document.createParagraph();
         paragraph.setAlignment(ParagraphAlignment.RIGHT);
         XWPFRun run = paragraph.createRun();
@@ -165,7 +152,6 @@ public class DocxHelper {
         run.addCarriageReturn();
         run.setText(time);
         run.setFontSize(16.0);
-        run.setFontFamily(setting.getByGroup("font.FangSong", "windows"));
-        //run.setFontFamily("STFangsong");
+        run.setFontFamily("FangSong");
     }
 }
