@@ -25,4 +25,6 @@ module com.dream.docxwriter {
     opens com.dream.docxwriter.controller to javafx.fxml;
     exports com.dream.docxwriter;
     exports com.dream.docxwriter.controller;
+    exports com.dream.docxwriter.activity;
+    exports com.dream.docxwriter.global;
 }

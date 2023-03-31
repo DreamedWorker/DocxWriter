@@ -3,7 +3,10 @@ package com.dream.docxwriter;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.poi.PoiChecker;
 import cn.hutool.poi.word.Word07Writer;
+import com.dream.docxwriter.activity.MeetingRecorder;
+import com.dream.docxwriter.global.Context;
 import com.dream.docxwriter.helper.DocxHelper;
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -58,6 +61,12 @@ public class HelloController extends Control {
     private void onHelpDocSelected() throws IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(URI.create("https://github.com/DreamedWorker/DocxWriter/wiki"));
+    }
+
+    @FXML
+    private void onMeetingSelected(){
+        Context.stageManager.jump("hello-view.fxml",
+                "window_subtitle.fxml");
     }
 
     @FXML
@@ -247,7 +256,7 @@ public class HelloController extends Control {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("activity_about.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800.0, 600.0);
         Stage stage = new Stage();
-        stage.setTitle("WordWriter - Official File Generator");
+        stage.setTitle("DocxWriter - Official File Generator");
         stage.setScene(scene);
         stage.show(); //copy the code from Application.kt
     }

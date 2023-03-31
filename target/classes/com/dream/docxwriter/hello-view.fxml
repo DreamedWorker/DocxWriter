@@ -16,6 +16,10 @@
             <MenuItem mnemonicParsing="false" text="增改元数据" onAction="#onPrimarySelected"/>
             <MenuItem mnemonicParsing="false" text="清空全部" onAction="#onClearAllSelected"/>
         </Menu>
+        <Menu mnemonicParsing="false" text="类型">
+            <MenuItem mnemonicParsing="false" text="基本公文" />
+            <MenuItem mnemonicParsing="false" text="会议纪要" onAction="#onMeetingSelected"/>
+        </Menu>
         <Menu mnemonicParsing="false" text="帮助">
             <MenuItem mnemonicParsing="false" text="关于" onAction="#aboutWindow"/>
             <MenuItem mnemonicParsing="false" text="帮助文档" onAction="#onHelpDocSelected"/>
